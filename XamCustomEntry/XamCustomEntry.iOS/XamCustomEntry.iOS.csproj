@@ -67,6 +67,7 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="Renderers\XamEntryRenderer.cs" />
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -132,10 +133,14 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="3.4.0.1008975" />
+    <PackageReference Include="Xamarin.Forms" Version="3.4.0.1039999" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
+    <ProjectReference Include="..\..\XamCustomEntry.Shared\XamCustomEntry.Shared.csproj">
+      <Project>{59422E17-82BD-4228-AB86-A5A9C26D019C}</Project>
+      <Name>XamCustomEntry.Shared</Name>
+    </ProjectReference>
     <ProjectReference Include="..\XamCustomEntry\XamCustomEntry.csproj">
       <Project>{678A2596-8805-4D1E-9FC4-262F0BC2F622}</Project>
       <Name>XamCustomEntry</Name>
